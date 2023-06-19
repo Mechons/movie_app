@@ -9,16 +9,17 @@ import {
 
 import "./MovieDetails.scss";
 const MovieDetail = () => {
-  const { imdbID } = useParams();
+  const { imbdID } = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getSelectedMovieOrShow);
   console.log(data);
+  console.log(imbdID);
   useEffect(() => {
-    dispatch(fetchAsyncMovieOrShowDetail(imdbID));
+    dispatch(fetchAsyncMovieOrShowDetail(imbdID));
     return () => {
       dispatch(removeSelectedMovieOrShow());
     };
-  }, [dispatch, imdbID]);
+  }, [dispatch, imbdID]);
   return (
     <div className="movie-section">
       {Object.keys(data).length === 0 ? (

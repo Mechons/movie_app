@@ -34,6 +34,7 @@ const Header = () => {
       </div>
        <div className="user-image">
         <img src={user} alt='user'/>
+        <i class="bi bi-film"></i>
        </div>
     </div>
   )
