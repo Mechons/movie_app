@@ -2,16 +2,23 @@
 
 .movie-list,
 .show-list {
-    margin: 20px 0px;
+  margin: 20px 0px;
 
-    h2 {
-        color: $font-secondary;
-        margin-bottom: 32px;
-        font-weight: 600;
-    }
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 32px;
+    font-weight: 600;
+  }
 }
 .movie-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 15px;
+}
+
+.shows-error,
+.movies-error {
+  h3 {
+    color: $font-primary;
   }
+}
