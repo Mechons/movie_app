@@ -8,6 +8,7 @@ import {
 } from "../../features/movies/MovieSlice";
 
 import "./MovieDetails.scss";
+import { Link } from "react-router-dom";
 const MovieDetail = () => {
   const { imbdID } = useParams();
   const dispatch = useDispatch();
@@ -30,17 +31,17 @@ const MovieDetail = () => {
             <div className="movie-title">{data.Title}</div>
             <div className="movie-rating">
               <span>
-                IMDB Rating <i className="fa fa-star"></i> : {data.imdbRating}
+                IMDB Rating <i class="bi bi-star-half"></i> : {data.imdbRating}
               </span>
               <span>
-                IMDB Votes <i className="fa fa-thumbs-up"></i> :{" "}
+                IMDB Votes <i class="bi bi-hand-thumbs-up"></i> :{" "}
                 {data.imdbVotes}
               </span>
               <span>
-                Runtime <i className="fa fa-film"></i> : {data.Runtime}
+                Runtime <i class="bi bi-film"></i> : {data.Runtime}
               </span>
               <span>
-                Year <i className="fa fa-calendar"></i> : {data.Year}
+                Year <i class="bi bi-calendar3"></i> : {data.Year}
               </span>
             </div>
             <div className="movie-plot">{data.Plot}</div>
@@ -68,7 +69,9 @@ const MovieDetail = () => {
             </div>
           </div>
           <div className="section-right">
-            <img src={data.Poster} alt={data.Title} />
+            <Link to="/">
+              <img src={data.Poster} alt={data.Title} />
+            </Link>
           </div>
         </>
       )}
